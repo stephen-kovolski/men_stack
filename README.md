@@ -1,2 +1,2 @@
 # men_stack
-Basic back end men stack.
+Basic back end server set up
