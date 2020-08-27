@@ -13,11 +13,23 @@ const app = express();
 
 app.get('/', (req, res) => {
     res.status(200).json({
-        message: "success"
+        message: "successful get request"
     })
 })
 
 app.post('/', (req, res) => {
+    res.status(200).json({
+        message: "successfull post request"
+    })
+})
+
+app.put('/:id', (req, res) => {
+    res.status(200).json({
+        message: "successfull put"
+    })
+})
+
+app.delete('/:id', (req, res) => {
     res.status(200).json({
         message: "success"
     })
