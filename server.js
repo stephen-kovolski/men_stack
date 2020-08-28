@@ -8,32 +8,20 @@ const connectionURI = process.env.MONGO;
 const deprecatedObj = {useUnifiedTopology: true, useNewUrlParser: true}
 const colors = require('colors')
 
+
 const app = express();
 
+app.use(express.static('public'));
 
-app.get('/', (req, res) => {
-    res.status(200).json({
-        message: "successful get request"
-    })
-})
+//route files
+const homeRouter = require('./routes/homeRouter')
 
-app.post('/', (req, res) => {
-    res.status(200).json({
-        message: "successfull post request"
-    })
-})
 
-app.put('/:id', (req, res) => {
-    res.status(200).json({
-        message: "successfull put"
-    })
-})
+app.use('/', homeRouter )
 
-app.delete('/:id', (req, res) => {
-    res.status(200).json({
-        message: "success"
-    })
-})
+
+
+
 
 
 app.listen(PORT, console.log(`listening on port ${PORT}`.underline.yellow)); 

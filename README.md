@@ -18,3 +18,7 @@ Basic back end server set up
     [*] put
     [*] delete
 
+
+8.27.20
+[*] Started html file and made sure the front end was running.
+[*] Home route set up
