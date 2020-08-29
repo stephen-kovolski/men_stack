@@ -1,6 +1,10 @@
 const router = require('express').Router();
 
+//@desc     Home Page
+//@route    Get localhost:5000
+//access    Public
 router.get('/', (req, res) => {
+
     res.status(200).json({
         message: "successful get request"
     })
